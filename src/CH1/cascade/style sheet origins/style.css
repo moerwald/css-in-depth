@@ -1,0 +1,26 @@
+
+/* Overwrite User Agent Styles */
+
+h1 {
+    color: #2f4f4f
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: .25em;
+    background-color: green;
+    font-size: 1.5rem;
+    margin: 0 1rem ;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
