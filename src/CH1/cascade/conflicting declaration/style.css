@@ -1,0 +1,17 @@
+
+/* tag selector */
+h1 {
+    font-family: sans-serif;
+}
+
+/* this declaration will be used
+   based on highest specifity */
+/* ID selector */
+#page-title {
+    font-family: cursive;
+}
+
+/* class selector */
+.title {
+    font-family: monospace;
+}
