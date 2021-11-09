@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .padded {
+            font-size: 16px;
+            padding: 2em;
+            border: 1px solid;
+        }
+
+        .small,
+        .large {
+            background-color: blueviolet;
+            color: white;
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        .small{
+            font-size: 16px;
+            padding: 1em;
+            border-radius: .5em;
+        }
+
+        .large{
+            font-size: 32px;
+            padding: 1em;
+            border-radius: .5em;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Ems</h1>
+        <p>Ems are <em>relative units</em> based on the <strong>font-size.</strong> If the font-size is 16px and e.g. a padding of 2em is used, the browser calculates a computed value of 32px.  </p>
+        <div class="padded">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi qui, neque corrupti animi incidunt maiores
+            cupiditate deserunt rem exercitationem, cum cumque quos enim eum porro assumenda laboriosam autem blanditiis
+            eos!
+        </div>
+        <p>Using ems make sense for <em>padding</em>, <em>height</em>, <em>border-radius</em> because they'll scale with the <strong>font-size</strong></p>
+
+        <div class="padded-links">
+            <a href="#" class="small">Small</a>
+            <a href="#" class="large">Large</a>
+        </div>
+    </section>
+
+</body>
+
+</html>
