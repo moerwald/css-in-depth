@@ -21,16 +21,18 @@
             margin: 0 1rem;
         }
 
-        .small{
-            font-size: 16px;
+        .box {
             padding: 1em;
             border-radius: .5em;
+            text-decoration: none;
+        }
+
+        .small{
+            font-size: 16px;
         }
 
         .large{
             font-size: 32px;
-            padding: 1em;
-            border-radius: .5em;
         }
 
     </style>
@@ -47,9 +49,9 @@
         </div>
         <p>Using ems make sense for <em>padding</em>, <em>height</em>, <em>border-radius</em> because they'll scale with the <strong>font-size</strong></p>
 
-        <div class="padded-links">
-            <a href="#" class="small">Small</a>
-            <a href="#" class="large">Large</a>
+        <div >
+            <a href="#" class="box small">Small</a>
+            <a href="#" class="box large">Large</a>
         </div>
     </section>
 
