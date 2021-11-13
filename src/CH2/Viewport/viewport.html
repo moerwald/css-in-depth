@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: calc(0.5em + 1vw);
+        }
+
+        .padded {
+            font-size: 16px;
+            padding: 2em;
+            border: 1px solid;
+        }
+
+        .small,
+        .large {
+            background-color: blueviolet;
+            color: white;
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        .box {
+            padding: 1em;
+            border-radius: .5em;
+            text-decoration: none;
+        }
+
+        .small {
+            font-size: 16px;
+        }
+
+        .large {
+            font-size: 32px;
+        }
+
+        .example-box {
+            border: 1px solid black;
+            border-radius: 1em;
+            padding: .5em;
+        }
+
+        .calculated {
+            font-size: 2em;
+        }
+
+        .example-box::before {
+            content: "Example:";
+            font-weight: 900;
+        }
+
+        .shrinking-font-size {
+            font-size: 0.85em;
+        }
+
+        .none-shrinking-font-size {
+            font-size: 0.85rem;
+        }
+
+        .square {
+            width: 50vmin;
+            height: 50vmin;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h1>The viewport</h1>
+        <p>The viewport is the visible content of the browser window. Browsers support:
+        <ul>
+            <li>
+                <stron>vw</stron> 1/100th of the viewport width.
+            </li>
+            <li>
+                <stron>vh</stron> 1/100th of the viewport height.
+            </li>
+            <li>
+                <stron>vmin</stron> Returns the min value of width or height.
+            </li>
+            <li>
+                <stron>vmax</stron> Returns the max value of width or height.
+            </li>
+        </ul>
+        </p>
+
+        <p>Below square always has a site length of <em>50vmin</em>
+            (= 50/100th of min(height, width) ). In case of a height
+            of 1000px and a witdh of 500px the square site will be 250px.
+        </p>
+        <div class="square"></div>
+
+        <h2>Using the viewport allows smoothly font-size calculation</h2>
+
+        <p>If you change the width of your browser window the font-size will be adapted smmoothly</p>
+
+
+
+    </section>
+
+</body>
+
+</html>

@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            font-size: 16px;
+            ;
+        }
+
         .padded {
             font-size: 16px;
             padding: 2em;
@@ -27,33 +32,108 @@
             text-decoration: none;
         }
 
-        .small{
+        .small {
             font-size: 16px;
         }
 
-        .large{
+        .large {
             font-size: 32px;
         }
 
+        .example-box {
+            border: 1px solid black;
+            border-radius: 1em;
+            padding: .5em;
+        }
+
+        .calculated {
+            font-size: 2em;
+        }
+
+        .example-box::before {
+            content: "Example:";
+            font-weight: 900;
+        }
+
+        .shrinking-font-size {
+            font-size: 0.85em;
+        }
+
+        .none-shrinking-font-size {
+            font-size: 0.85rem;
+        }
+
+        .square {
+            width: 50vmin;
+            height: 50vmin;
+            background-color: blueviolet;
+        }
     </style>
 </head>
 
 <body>
     <section>
         <h1>Ems</h1>
-        <p>Ems are <em>relative units</em> based on the <strong>font-size.</strong> If the font-size is 16px and e.g. a padding of 2em is used, the browser calculates a computed value of 32px.  </p>
+        <p>Ems are <em>relative units</em> based on the <strong>font-size.</strong> If the font-size is 16px and e.g. a
+            padding of 2em is used, the browser calculates a computed value of 32px. </p>
         <div class="padded">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi qui, neque corrupti animi incidunt maiores
+            Lorem ipsum dolor sit amet consectetour adipisicing elit. Quasi qui, neque corrupti animi incidunt maiores
             cupiditate deserunt rem exercitationem, cum cumque quos enim eum porro assumenda laboriosam autem blanditiis
             eos!
         </div>
-        <p>Using ems make sense for <em>padding</em>, <em>height</em>, <em>border-radius</em> because they'll scale with the <strong>font-size</strong></p>
+        <p>Using ems make sense for <em>padding</em>, <em>height</em>, <em>border-radius</em> because they'll scale with
+            the <strong>font-size</strong></p>
 
-        <div >
+        <div>
             <a href="#" class="box small">Small</a>
             <a href="#" class="box large">Large</a>
         </div>
+
+        <h2>Use <em>EMs</em> to define <strong>font-size</strong></h2>
+        <p>You can use ems to define font-size, when doing it the <em>em</em>-calculation will take the inherited
+            font-size</p>
+        <p>Following CSS will show it:</p>
+        <div class="example-box">
+            <p>body { font-size:16px;} .calculated { font-size: 2em;}</p>
+        </div>
+        <div class="example-box">
+            <p>Normal font-size</p>
+            <p class="calculated">Calculated font-size</p>
+        </div>
+
+        <h2>Be aware of EMs calculation</h2>
+        <p>Given following example:</p>
+        <div class="example-box">
+            <ul class="shrinking-font-size">
+                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, perferendis?</li>
+                <ul class="shrinking-font-size">
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, perferendis?</li>
+                    <ul class="shrinking-font-size">
+                        <li>Quo amet possimus dolorum consequuntur nobis. Ratione eius aperiam omnis.</li>
+                    </ul>
+                </ul>
+            </ul>
+        </div>
+        <p>
+            EMs are always calculated relative to the <strong>inherited</strong> font-size. For above
+            example the first <em>ul</em>-element wil have a font-size of 12.8px (16px * 0.8).
+            The next <em>ul</em>-element will have a font-size of 10px (12.8px * 0.8), and so.
+            To avoid this problem you should always use <strong>REMs</strong> (= EM relativ to the
+            <em>ROOT</em>-element)
+        </p>
+        <div class="example-box">
+            <ul class="none-shrinking-font-size">
+                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, perferendis?</li>
+                <ul class="none-shrinking-font-size">
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, perferendis?</li>
+                    <ul class="none-shrinking-font-size">
+                        <li>Quo amet possimus dolorum consequuntur nobis. Ratione eius aperiam omnis.</li>
+                    </ul>
+                </ul>
+            </ul>
+        </div>
     </section>
+
 
 </body>
 
