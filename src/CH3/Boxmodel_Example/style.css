@@ -1,3 +1,13 @@
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
 body {
     background-color: #eee;
     font-family: Helvetica, Arial, sans-serif;
@@ -16,6 +26,8 @@ main {
 .main {
     background-color: #fff;
     border-radius: .5em;
+    float: left;
+    width: 70% ;
 }
 
 .container {}
@@ -24,6 +36,9 @@ main {
     padding: 1.5em;
     background-color: #fff;
     border-radius: .5em;
+    float: left;
+    width: 29%;
+    margin-left: 1%;
 }
 
 .widget {}
