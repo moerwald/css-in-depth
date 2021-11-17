@@ -23,23 +23,22 @@ main {
     display: block;
 }
 
+.container {
+    display: flex;
+    width: 100%;
+}
+
 .main {
-    display: table-cell;
     width: 70%;
     background-color: #fff;
     border-radius: .5em;
 }
 
-.container {
-    display: table;
-    border-spacing: 1.5em 0;
-    width: 100%;
-}
 
 .sidebar {
-    display: table-cell;
     width: 30%;
     padding: 1.5em;
+    margin-left: 1em;
     background-color: #fff;
     border-radius: .5em;
 }
