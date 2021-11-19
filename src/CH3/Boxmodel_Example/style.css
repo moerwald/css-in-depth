@@ -17,6 +17,7 @@ header {
     color: #fff;
     background-color: #0072b0;
     border-radius: .5em;
+    padding: 1em 1.5em;
 }
 
 main {
@@ -33,7 +34,6 @@ main {
     background-color: #fff;
     border-radius: .5em;
 }
-
 
 .sidebar {
     width: 30%;
