@@ -21,3 +21,31 @@ body  *+* {
     max-width: 1080px;
     margin: 0 auto;
 }
+
+.site-nav {
+    display: flex;
+    list-style: none;
+    background: #5f4b44;
+    padding: .5em;
+    border-radius: .2em;
+}
+
+.site-nav > li {
+    margin-top: 0;
+}
+
+.site-nav > li > a{
+    text-decoration: none;
+    color: white;
+    background: #cc6b5a;
+    padding: .5em 1em;
+    display: block;
+}
+
+.site-nav > li + li {
+    margin-left: 1.5em;
+}
+
+.site-nav > .nav-right {
+    margin-left: auto;
+}
